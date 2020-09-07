@@ -1,0 +1,269 @@
+
+/*  tags    */
+
+a{
+ 
+
+  text-decoration: none;
+  
+}
+
+.dark-text{
+  text-decoration: none;
+  color: #343a40;
+  
+}
+
+.dark-text:hover{
+  text-decoration: none;
+  color:goldenrod;
+  
+}
+.fa-user{
+  color:black;
+}
+.fa-user-plus{
+  color:black;
+}
+/* navegacion */
+.nav-link{
+  text-decoration: none;
+  color:#fff;
+} 
+.dropdown-menu{
+  background-color:#343a40!important;
+  color: #fff !important;
+}
+
+.dropdown-item{
+  background-color:#343a40!important;
+  color: #fff !important;
+}
+
+.dropdown-item:hover{
+  background-color:#000!important;
+  color: #fff !important;
+  font-size:15px;
+}
+
+.nav-link.dropdown-toggle:hover{
+  background-color:#000!important;
+  color: #fff !important;
+ font-size:15px;
+}
+
+.nav-link:hover{
+  background-color:#000!important;
+  color: #fff !important;
+ font-size:15px;
+}
+
+/* encabezados de los productos */
+.productos a:hover{
+  text-decoration: none;
+  color:#000;
+
+}
+.productos a{
+ 
+  text-decoration: none;
+  color:#000;
+}
+
+/* clases de cartas */
+
+
+
+
+.encabezados-contenedor{
+  
+  margin: 0 1rem 0 1rem;
+
+  border:solid 1px black;
+  padding:1rem;
+ 
+
+  text-align: center;
+  background-image: url(../img/degradado.jpg);
+
+}
+.content-fluid{
+  margin: 0 1rem 0 1rem;
+}
+.productos a{
+  color: white;
+}
+
+
+.seccion-contenedor{
+width:100%;
+height:50px;
+}
+
+.paragraphs__container{
+  
+  background-image: url(../img/degradado2.jpg);
+  color:white;
+  padding:10px;
+  margin: 0 1rem 0 1rem;
+
+}
+
+
+.card-group{
+  margin:0 1rem 0 1rem;
+}
+
+.content-fluid{
+  margin: 0 1rem 0 1rem;
+
+}
+
+.row{
+  align-content: center;
+}
+
+
+/*  buscador*/
+
+
+form{
+  padding-right: 1rem;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  
+}
+
+form.example button {
+  background-image: url("../img/search.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: lightblue;
+  height: 47px;
+  width:50px;
+  padding: 20px;
+  color: white;
+  border: 1px solid grey;
+  border-left: none; 
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background-image: url("../img/search.png");
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* formularios */
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+
+}
+
+.cont{
+  background-color: rgba(8, 8, 8, 0.4);
+  color:white;
+}
+
+
+@media only screen and (max-width:1200px)  {
+
+  .carrousel-caption{
+    padding-bottom: 8%;
+  }
+
+ }
+
+@media only screen and (max-width:1200px)  { 
+
+  .carousel-caption h1{
+    font-size: 75px;
+  }
+  .carousel-caption p{
+    font-size: 60px;
+  }
+
+
+ }
+
+ @media only screen and (max-width: 992px){  
+  .carousel-caption h1{
+    font-size: 60px;
+  }
+  .carousel-caption p{
+    font-size: 45px;
+  }
+ 
+ }
+
+@media only screen and (max-width: 768px)  {
+
+.carousel-caption  h1 {
+    font-size: 45px;
+  }
+  .carousel-caption p {
+    font-size: 30px;
+  }
+  
+}
+
+
+
+@media only screen and  (max-width: 576px) { 
+  
+.carousel-caption h1{
+    font-size: 25px;
+  }
+  .carousel-caption p{
+    font-size: 20px;
+  }
+ 
+ }
