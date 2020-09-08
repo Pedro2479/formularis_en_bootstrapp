@@ -75,7 +75,7 @@
         </ul>
      
        <!--Modal: Login / Register Form-->
-         <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" action="validar.js" method="POST">
+         <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog cascading-modal" role="document">
               <!--Content-->
               <div class="modal-content">
@@ -103,25 +103,25 @@
                       <div class="modal-body mb-1">
                         <div class="md-form form-sm mb-5">
                           <i class="fa fa-envelope prefix"></i>
-                          <input type="email" id="modalLMail" class="form-control form-control-sm validate">
+                          <input type="email" id="modalLMail" class="form-control form-control-sm ">
                           <label data-error="wrong" data-success="right" for="modalLMail">Your email</label>
                           <div class="invalid-feedback" id="errorLMail"></div>
                         </div>
           
                         <div class="md-form form-sm mb-4">
                           <i class="fa fa-lock prefix"></i>
-                          <input type="password" id="loginPassword" class="form-control form-control-sm validate">
+                          <input type="password" id="loginPassword" class="form-control form-control-sm ">
                           <label data-error="wrong" data-success="right" for="loginPassword">Your password</label>
                           <div class="invalid-feedback" id="errorLoginPassword"></div>
                         </div>
                         <div class="text-center mt-2">
-                          <button class="btn btn-dark" type="submit" onclick="validarLogin();">Log in <i class="fa fa-sign-in ml-1"></i></button>
+                          <button class="btn btn-dark" type="submit" onclick="return validarLogin();">Log in <i class="fa fa-sign-in ml-1"></i></button>
                         </div>
                       </div>
                       <!--Footer-->
                       <div class="modal-footer">
                         <div class="options text-center text-md-right mt-1">
-                          <p>Not a member? <a href="html/formulario.html" class="dark-text">Sign Up</a></p>
+                          <p>Not a member? <a href="#" class="dark-text">Sign Up</a></p>
                           <p>Forgot <a href="#" class="dark-text">Password?</a></p>
                         </div>
                         <button type="button" class="btn btn-outline-dark  ml-auto" data-dismiss="modal">Close</button>
@@ -137,21 +137,21 @@
                       <div class="modal-body">
                         <div class="md-form form-sm mb-5">
                           <i class="fa fa-envelope prefix"></i>
-                          <input type="email" id="modalMail" class="form-control form-control-sm validate">
+                          <input type="email" id="modalMail" class="form-control form-control-sm ">
                           <label data-error="wrong" data-success="right" for="modalMail" >Your email</label>
                           <div class="invalid-feedback" id="errorEmail"></div>
                         </div>
           
                         <div class="md-form form-sm mb-5">
                           <i class="fa fa-lock prefix"></i>
-                          <input type="password" id="modalPassword" class="form-control form-control-sm validate">
+                          <input type="password" id="modalPassword" class="form-control form-control-sm ">
                           <label data-error="wrong" data-success="right" for="modalPassword" >Your password</label>
                           <div class="invalid-feedback" id="errorPassword"></div>
                         </div>
           
                         <div class="md-form form-sm mb-4">
                           <i class="fa fa-lock prefix"></i>
-                          <input type="password" id="modalRPassword" class="form-control form-control-sm validate">
+                          <input type="password" id="modalRPassword" class="form-control form-control-sm ">
                           <label data-error="wrong" data-success="right" for="modalRPassword" >Repeat password</label>
                           <div class="invalid-feedback" id="errorRPassword"></div>
                         </div>
@@ -172,7 +172,7 @@
 
 
                         <div class="text-center form-sm mt-2">
-                          <button class="btn btn-dark" type="submit" onclick="validar();">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+                          <button class="btn btn-dark" type="submit" onclick="return validar();">Sign up <i class="fas fa-sign-in ml-1"></i></button>
                         </div>
           
                       </div>
@@ -191,23 +191,17 @@
               </div>
               <!--/.Content-->
             </div>
-          </div>
+       </div></div>
 
+          <form class="example ml-auto " id="formSearch" onclick="return validarSearch();">
+        
+            <input class="form-control" type="text" placeholder="Search.." id="search">
+            <button type="submit" class="bg-dark"><i class="fa fa-search"></i></button>
+            <div class="form-control invalid-feedback" id="errorSearch"></div>
+          </form>
+          
       
 <button type="button" class="btn btn-secondary bg-dark" data-toggle="modal" data-target="#modalLRForm" data-whatever="@mdo">Login</button>
-
-<script src="js/validar.js"></script>
-
-
-<form class="example ml-auto" id="formSearch" >
-  <input class="form-control" type="text" placeholder="Search.." id="search">
-  <button type="submit" class="bg-dark" onclick="validarSearch();"><i class="fa fa-search"></i></button>
-  <div class="form-control invalid-feedback" id="errorSearch"></div>
-</form>
-<script src="js/buscador.js"></script>
-
-
-
 
     </nav>
 
@@ -548,22 +542,7 @@
 
 </footer>
 
-<script>
-  $('#exampleModal').on('show.bs.modal', function (event) {
-   
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    var recipient = button.data('whatever') // Extract info from data-* attributes
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this)
-    modal.find('.modal-title').text('New message to ' + recipient)
-    modal.find('.modal-body input').val(recipient)
-    event.preventDefault
-  })
-  
-  
-  
-  </script>
+
 
   
 
@@ -573,6 +552,26 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src="js/validaciones.js"></script>
+    
+    <script src="js/buscador.js"></script>
+
+    <script>
+      $('#exampleModal').on('show.bs.modal', function (event) {
+       
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var recipient = button.data('whatever') // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this)
+        modal.find('.modal-title').text('New message to ' + recipient)
+        modal.find('.modal-body input').val(recipient)
+        event.preventDefault
+      }); 
+     
+     </script>
+     
   </body>
 </html>
 
