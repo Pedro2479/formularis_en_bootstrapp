@@ -27,4 +27,10 @@ forms.addEventListener('blur', (event) => {
 	if(event.target.value!='') event.target.classList.remove('is-invalid');
 
 }, true);
+forms.addEventListener('submit', (event) => {
+   
+    event.preventDefault();
+	if(event.target.value!='') event.target.classList.remove('is-invalid');
+
+}, true);
 
